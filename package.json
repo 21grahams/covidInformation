@@ -4,7 +4,8 @@
   "description": "Your one stop shop for all up-to-date covid information",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx nodemon server/index.js",
+    "react-dev": "webpack --w"
   },
   "repository": {
     "type": "git",

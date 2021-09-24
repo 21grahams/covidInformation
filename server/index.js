@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
-const queries = require('../database/schema.js');
+const pool = require('../database/index.js');
 const cors = require('cors');
+const port = 3000;
+const path = require('path');
  
 // middleware
 // serve static files from dist dir
@@ -21,12 +23,10 @@ app.get('/entries', (req, res) => {
    }
  })
 });
- 
-// set port where server will listen
-const port = 3000;
- 
+
+
 // tell server to listen on predefined port
 app.listen(port, () => {
- console.log(`Express server listening on port: ${port}`);
+ console.log(`Graham\'s Express Server Listening on Port: ${port}`);
 });
  

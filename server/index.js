@@ -4,6 +4,7 @@ const port = 3000;
 const path = require('path');
 const db = require('../database/queries');
 const cors = require('cors');
+const axios = require('axios');
  
 //=====================
 ///// Middleware //////
@@ -18,13 +19,12 @@ app.use(cors());
 ///// Middleware //////
 //=====================
 app.get('/getStats', (req, res) => {
-  db.getStats((err, results) => {
-    if (err) {
-      res.status(404).send('Error with Get Request: ', err)
-    } else {
-      res.status(200).send(results.rows)
-    };
-  });
+  axios({
+    method: 'get',
+    url: 'https://api.covid19api.com/summary'
+  })
+  .then(response => res.send(response.data))
+  .catch(err => res.send('Error with Get Request: ', err));
 });
 
 

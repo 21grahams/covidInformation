@@ -1,27 +1,30 @@
 const express = require('express');
 const app = express();
-const pool = require('../database/index.js');
-const cors = require('cors');
 const port = 3000;
 const path = require('path');
+const db = require('../database/queries');
+const cors = require('cors');
  
-// middleware
-// serve static files from dist dir
+//=====================
+///// Middleware //////
+//=====================
 app.use(express.static(__dirname + '/../dist'));
 // use express.json for parsing JSON
 app.use(express.json());
 // use cors middleware for enabling CORS with various options
 app.use(cors());
  
-// get entries
-app.get('/entries', (req, res) => {
- queries.getEntry(req.query.name, (err, entry) => {
-   if (err) {
-     res.status(404).send(err);
-   } else {
-     res.status(200).send(entry);
-   }
- })
+//=====================
+///// Middleware //////
+//=====================
+app.get('/getStats', (req, res) => {
+  db.getStats((err, results) => {
+    if (err) {
+      res.status(404).send('Error with Get Request: ', err)
+    } else {
+      res.status(200).send(results.rows)
+    };
+  });
 });
 
 

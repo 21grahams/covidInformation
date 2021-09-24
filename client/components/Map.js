@@ -1,12 +1,12 @@
 import React from 'react';
 import Area from './Area';
 
-const Map = ({ data }) => {
+const Map = ({ data, handleDescription }) => {
 
   return (
     <div>
       {data ? data.map((location, i) => (
-        <Area location={location.Country} key={i} />
+        <Area location={location} key={i} handleDescription={handleDescription} />
       )) : 'Loading...'}
     </div>
   )

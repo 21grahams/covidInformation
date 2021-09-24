@@ -16,9 +16,13 @@ const App = () => {
     getAllData();
   }, []);
 
+  const handleDescription = (country) => {
+    console.log('working: ', country)
+  }
+
   return (
     <div>
-      <Map data={data.Countries} />
+      <Map data={data.Countries} handleDescription={handleDescription} />
     </div>
   )
 }

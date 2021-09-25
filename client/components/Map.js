@@ -10,10 +10,10 @@ const Map = ({ data, global }) => {
         <div className="totals">
           <>
             <h1>Global Cases</h1>
-            <h4>New Confirmed Cases: {commaNumber(global.NewConfirmed)}</h4>
-            <h4>New Confirmed Deaths: {commaNumber(global.NewDeaths)}</h4>
-            <h4>Total Confirmed Cases: {commaNumber(global.TotalConfirmed)}</h4>
-            <h4>Total Deaths: {commaNumber(global.TotalDeaths)}</h4>
+            <h4>New Confirmed Cases: <span className='numbers'>{commaNumber(global.NewConfirmed)}</span></h4>
+            <h4>New Confirmed Deaths: <span className='numbers'>{commaNumber(global.NewDeaths)}</span></h4>
+            <h4>Total Confirmed Cases: <span className='numbers'>{commaNumber(global.TotalConfirmed)}</span></h4>
+            <h4>Total Deaths: <span className='numbers'>{commaNumber(global.TotalDeaths)}</span></h4>
           </>
         </div>
       ) : null}

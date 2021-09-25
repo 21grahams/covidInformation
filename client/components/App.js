@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Map from './Map';
-import Current from './Current';
+import styles from '../../dist/styles.css';
 
 const App = () => {
 
   const [data, setData] = useState([]);
-  const [currentCountry, setCurrentCountry] = useState([]);
 
   const getAllData = () => {
     axios.get('/getStats')
@@ -18,14 +17,9 @@ const App = () => {
     getAllData();
   }, []);
 
-  const handleDescription = (country) => {
-    setCurrentCountry(country)
-  };
-
   return (
     <div>
-      <Current currentCountry={currentCountry} />
-      <Map data={data.Countries} handleDescription={handleDescription} />
+      <Map data={data.Countries} global={data.Global} />
     </div>
   )
 }

@@ -1,6 +1,15 @@
+body {
+  background-image: url('https://motionarray.imgix.net/preview-105836-H8IWV7xhrM-high_0008.jpg');
+}
+
 .singleCountries {
   cursor: pointer;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+}
+
+.text {
+  color: white;
 }
 
 .totals {

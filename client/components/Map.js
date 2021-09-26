@@ -9,11 +9,11 @@ const Map = ({ data, global }) => {
       {global ? (
         <div className="totals">
           <>
-            <h1>Global Cases</h1>
-            <h4>New Confirmed Cases: <span className='numbers'>{commaNumber(global.NewConfirmed)}</span></h4>
-            <h4>New Confirmed Deaths: <span className='numbers'>{commaNumber(global.NewDeaths)}</span></h4>
-            <h4>Total Confirmed Cases: <span className='numbers'>{commaNumber(global.TotalConfirmed)}</span></h4>
-            <h4>Total Deaths: <span className='numbers'>{commaNumber(global.TotalDeaths)}</span></h4>
+            <h1 className='text'>Global Cases</h1>
+            <h4 className='text'>New Confirmed Cases: <span className='numbers'>{commaNumber(global.NewConfirmed)}</span></h4>
+            <h4 className='text'>New Confirmed Deaths: <span className='numbers'>{commaNumber(global.NewDeaths)}</span></h4>
+            <h4 className='text'>Total Confirmed Cases: <span className='numbers'>{commaNumber(global.TotalConfirmed)}</span></h4>
+            <h4 className='text'>Total Deaths: <span className='numbers'>{commaNumber(global.TotalDeaths)}</span></h4>
           </>
         </div>
       ) : null}

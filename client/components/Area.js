@@ -10,10 +10,8 @@ const Area = ({ location }) => {
 
   return (
     <div>
-      <h3>
-        <span className="singleCountries" onClick={handleToggle}>
+      <h3 className="singleCountries" onClick={handleToggle}>
           {location.Country}
-        </span>
       </h3>
       {toggle ? (
         <>

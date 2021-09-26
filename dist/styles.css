@@ -1,21 +1,39 @@
 body {
-  background-image: url('https://motionarray.imgix.net/preview-105836-H8IWV7xhrM-high_0008.jpg');
+  background-image: url("https://motionarray.imgix.net/preview-105836-H8IWV7xhrM-high_0008.jpg");
 }
 
 .singleCountries {
   cursor: pointer;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   color: white;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 7px 10px 12px -5px rgba(0,0,0.56);
+  border-radius: 10px;
+  transition: all ease 500ms;
+}
+
+.singleCountries:hover {
+  opacity: 0.7;
 }
 
 .text {
+  text-align: center;
   color: white;
 }
 
 .totals {
   text-align: center;
+  transition: all ease 500ms;
+}
+
+.totals:hover {
+  transform: scale(1.25);
+  opacity: 0.7;
 }
 
 .numbers {
+  text-align: center;
   color: red;
 }

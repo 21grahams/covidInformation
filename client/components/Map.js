@@ -5,7 +5,7 @@ import SearchBar from "material-ui-search-bar";
 
 const Map = ({ data, setData, global }) => {
   const [searched, setSearched] = useState("");
-  const [rows, setRows] = useState(data);
+  const [rows, setRows] = useState([]);
 
   const handleSearch = (searchVal) => {
     const filteredRows = data.filter((country) => {
@@ -19,6 +19,7 @@ const Map = ({ data, setData, global }) => {
       <SearchBar
         value={searched}
         onChange={(searchVal) => handleSearch(searchVal)}
+        onCancelSearch={() => setSearched('')}
         placeholder="Search Country Here"
       />
       {global ? (
@@ -49,9 +50,10 @@ const Map = ({ data, setData, global }) => {
         </div>
       ) : null}
 
-      {data
-        ? data.map((location, i) => <Area location={location} key={i} />)
+      {rows
+        ? rows.map((location, i) => <Area location={location} key={i} />)
         : "Loading..."}
+
     </div>
   );
 };

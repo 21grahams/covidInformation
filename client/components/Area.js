@@ -9,11 +9,12 @@ const Area = ({ location }) => {
   };
 
   return (
-    <div>
 
-      <h3 className="singleCountries" onClick={handleToggle}>
+    <div>
+      <h3 className="singleCountries" onClick={handleToggle} >
           {location.Country}
       </h3>
+
       {toggle ? (
         <>
           <h5 className='text'>New Confirmed Cases: <span className='numbers'>{commaNumber(location.NewConfirmed)}</span></h5>

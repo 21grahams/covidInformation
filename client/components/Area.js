@@ -10,6 +10,7 @@ const Area = ({ location }) => {
 
   return (
     <div>
+
       <h3 className="singleCountries" onClick={handleToggle}>
           {location.Country}
       </h3>

@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <div>
-      <Map data={data.Countries} global={data.Global} />
+      <Map data={data.Countries} setData={setData} global={data.Global} />
     </div>
   )
 }

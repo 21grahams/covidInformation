@@ -18,22 +18,31 @@ body {
   opacity: 0.7;
 }
 
-.text {
+.textTotal {
   text-align: center;
   color: white;
+  font-size: large;
+  margin: 0 auto;
+  padding-top: 2em;
 }
 
-.totals {
-  text-align: center;
-  transition: all ease 500ms;
-}
-
-.totals:hover {
-  transform: scale(1.25);
-  opacity: 0.7;
-}
-
-.numbers {
+.numberTotals {
   text-align: center;
   color: red;
+  font-weight: bolder;
+  font-size: large;
+  margin: 0 auto;
+  padding-top: 2em;
+}
+
+.textSingle {
+  text-align: center;
+  color: white;
+  font-size: medium;
+}
+
+.numberSingle {
+  text-align: center;
+  color: red;
+  font-size: medium;
 }

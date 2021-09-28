@@ -23,29 +23,13 @@ const Map = ({ data, setData, global }) => {
         placeholder="Search Country Here"
       />
       {global ? (
-        <div className="totals">
+        <div>
           <>
-            <h1 className="text">Global Cases</h1>
-            <h4 className="text">
-              New Confirmed Cases:{" "}
-              <span className="numbers">
-                {commaNumber(global.NewConfirmed)}
-              </span>
-            </h4>
-            <h4 className="text">
-              New Confirmed Deaths:{" "}
-              <span className="numbers">{commaNumber(global.NewDeaths)}</span>
-            </h4>
-            <h4 className="text">
-              Total Confirmed Cases:{" "}
-              <span className="numbers">
-                {commaNumber(global.TotalConfirmed)}
-              </span>
-            </h4>
-            <h4 className="text">
-              Total Deaths:{" "}
-              <span className="numbers">{commaNumber(global.TotalDeaths)}</span>
-            </h4>
+            <h1 className="textTotal" style={{fontSize: 'xx-large'}}>Global Cases</h1>
+            <h4 className="textTotal">New Confirmed Cases:{" "}<span className="numberTotals">{commaNumber(global.NewConfirmed)}</span></h4>
+            <h4 className="textTotal">New Confirmed Deaths:{" "}<span className="numberTotals">{commaNumber(global.NewDeaths)}</span></h4>
+            <h4 className="textTotal">Total Confirmed Cases:{" "}<span className="numberTotals">{commaNumber(global.TotalConfirmed)}</span></h4>
+            <h4 className="textTotal">Total Deaths:{" "}<span className="numberTotals">{commaNumber(global.TotalDeaths)}</span></h4>
           </>
         </div>
       ) : null}

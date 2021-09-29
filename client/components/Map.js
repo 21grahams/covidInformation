@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Area from "./Area";
 import commaNumber from "comma-number";
 import SearchBar from "material-ui-search-bar";
@@ -13,6 +13,10 @@ const Map = ({ data, setData, global }) => {
     });
     setRows(filteredRows);
   };
+
+  useEffect(() => {
+    setRows(data);
+  }, [data]);
 
   return (
     <div>

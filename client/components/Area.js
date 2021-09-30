@@ -18,6 +18,7 @@ const Area = ({ location }) => {
 
       {toggle ? (
         <>
+        <br></br>
           <h5 className='textSingle'>New Confirmed Cases: <span className='numberSingle'>{commaNumber(location.NewConfirmed)}</span></h5>
           <h5 className='textSingle'>Total Confirmed Cases: <span className='numberSingle'>{commaNumber(location.TotalConfirmed)}</span></h5>
           <h5 className='textSingle'>New Deaths: <span className='numberSingle'>{commaNumber(location.NewDeaths)}</span></h5>

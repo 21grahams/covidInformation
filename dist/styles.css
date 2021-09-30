@@ -4,18 +4,19 @@ body {
 
 .singleCountries {
   cursor: pointer;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: white;
-  text-align: center;
-  margin: 10px;
+  width: 250px;
   padding: 10px;
+  margin: auto;
   box-shadow: 7px 10px 12px -5px rgba(0,0,0.56);
-  border-radius: 10px;
-  transition: all ease 500ms;
+  background-color: white;
+  text-align: center;
+  border-radius: 3px;
+  opacity: .7;
 }
 
 .singleCountries:hover {
   opacity: 0.7;
+  background-color: rgb(77, 129, 197);
 }
 
 .textTotal {

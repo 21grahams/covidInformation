@@ -27,6 +27,17 @@ app.get('/getStats', (req, res) => {
   .catch(err => res.send('Error with Get Request: ', err));
 });
 
+  app.post('/userInfo', (req, res) => {
+    let userQuery = [req.body.name, req.body.email];
+    db.postInfo(userQuery, (err, results) => {
+      if (err) {
+        res.status(404).send('Error with Post Request')
+      } else {
+        res.status(201).send('Posted!');
+      };
+    });
+  });
+
 
 // tell server to listen on predefined port
 app.listen(port, () => {

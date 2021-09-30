@@ -8,6 +8,18 @@ function SignIn(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let login = {
+      name: name,
+      email: email
+    };
+    axios.post('/userInfo', login)
+      .then(res => alert('Thank you for joining!'))
+      .catch(err => console.log('Error With Registration', err));
+    props.onHide();
+  }
+
   return (
     <Modal
       {...props}
@@ -31,8 +43,8 @@ function SignIn(props) {
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
-        <Button onClick={props.onHide}>Submit</Button>
+        <Button variant="secondary" onClick={props.onHide}>Close</Button>
+        <Button onClick={handleSubmit}>Submit</Button>
       </Modal.Footer>
     </Modal>
   );

@@ -1,14 +1,21 @@
-CREATE DATABASE IF NOT EXISTS Covid;
-
 DROP DATABASE IF EXISTS Covid;
 
-\c Covid;
+CREATE DATABASE Covid;
+
+\c covid;
 
 DROP TABLE IF EXISTS stats;
 
+DROP TABLE IF EXISTS new_user;
+
 CREATE TABLE stats (
+  id INT PRIMARY KEY NOT NULL,
   city VARCHAR(30),
   state VARCHAR(30),
-  country VARCHAR(30),
-  cases INT
+  country VARCHAR(30)
+);
+
+CREATE TABLE new_user (
+  name VARCHAR(40),
+  email VARCHAR(100)
 );

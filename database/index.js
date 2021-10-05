@@ -9,7 +9,7 @@ const pool = new Pool({
 })
 
 pool.query('SELECT NOW()', (err, res) => {
-  console.log('Covid Database is Running on: ', res.rows)
+  console.log('Covid Database is Running on: ', res)
 })
 
 module.exports = pool;

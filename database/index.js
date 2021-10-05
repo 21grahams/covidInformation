@@ -9,7 +9,7 @@ const pool = new Pool({
 })
 
 pool.query('SELECT NOW()', (err, res) => {
-  console.log('Covid Database is Running on: ', res)
+  console.log('Covid Database is Running on: ', res) // need to install postgres on new machine
 })
 
 module.exports = pool;

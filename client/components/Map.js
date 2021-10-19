@@ -21,6 +21,7 @@ const Map = ({ data, setData, global }) => {
   return (
     <div>
       <SearchBar
+        style={{marginLeft: '10px'}}
         value={searched}
         onChange={(searchVal) => handleSearch(searchVal)}
         onCancelSearch={() => setSearched('')}

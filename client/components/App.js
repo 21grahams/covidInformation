@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Map from "./Map";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import SignIn from "./SignIn";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -23,14 +23,15 @@ const App = () => {
   return (
     <div>
       <>
-        <Button className='signUp' variant="primary" onClick={() => setModalShow(true)}>
+        <Button
+          className="signUp"
+          variant="primary"
+          onClick={() => setModalShow(true)}
+        >
           Sign Up
         </Button>
 
-        <SignIn
-          show={modalShow}
-          onHide={() => setModalShow(false)}
-        />
+        <SignIn show={modalShow} onHide={() => setModalShow(false)} />
       </>
       <Map data={data.Countries} setData={setData} global={data.Global} />
     </div>
